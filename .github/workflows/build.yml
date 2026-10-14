@@ -24,10 +24,11 @@ jobs:
         run: chmod +x gradlew
 
       - name: Build with Gradle
-        run: ./gradlew build
+        run: ./gradlew build --stacktrace
 
       - name: Upload plugin JAR
         uses: actions/upload-artifact@v4
+        if: always()
         with:
           name: TokenSMP-JAR
           path: build/libs/*.jar
