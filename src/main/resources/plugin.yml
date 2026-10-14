@@ -1,0 +1,70 @@
+name: TokenSMP
+version: 1.0.0
+main: com.tokensmp.TokenSMP
+api-version: 1.20
+author: TokenSMP Team
+description: A fully custom token-based SMP plugin with life system, custom items, abilities, and GUIs.
+website: https://github.com/tokensmp
+
+commands:
+  tokens:
+    description: Open the token GUI
+    usage: /tokens
+    permission: tokensmp.use
+    permission-message: "<red>You don't have permission to use this command.</red>"
+  tokenrecipe:
+    description: Open the token recipe GUI
+    usage: /tokenrecipe
+    permission: tokensmp.recipe
+    permission-message: "<red>You don't have permission to use this command.</red>"
+  tokeninfo:
+    description: View information about a specific token
+    usage: /tokeninfo <token>
+    permission: tokensmp.use
+    permission-message: "<red>You don't have permission to use this command.</red>"
+  lives:
+    description: View your current lives
+    usage: /lives [player]
+    permission: tokensmp.lives
+    permission-message: "<red>You don't have permission to use this command.</red>"
+  tokensmp:
+    description: Main TokenSMP command
+    usage: /tokensmp <subcommand>
+    permission: tokensmp.use
+    permission-message: "<red>You don't have permission to use this command.</red>"
+    aliases: [tsmp]
+
+permissions:
+  tokensmp.use:
+    description: Access to basic player commands
+    default: true
+  tokensmp.recipe:
+    description: Access to recipe GUI
+    default: true
+  tokensmp.lives:
+    description: View own lives
+    default: true
+  tokensmp.admin:
+    description: Full admin access
+    default: op
+    children:
+      tokensmp.admin.give: true
+      tokensmp.admin.take: true
+      tokensmp.admin.reload: true
+      tokensmp.admin.list: true
+      tokensmp.admin.lives: true
+  tokensmp.admin.give:
+    description: Give tokens to players
+    default: op
+  tokensmp.admin.take:
+    description: Take tokens from players
+    default: op
+  tokensmp.admin.reload:
+    description: Reload plugin configuration
+    default: op
+  tokensmp.admin.list:
+    description: List all tokens
+    default: op
+  tokensmp.admin.lives:
+    description: Manage player lives
+    default: op

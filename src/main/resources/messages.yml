@@ -1,0 +1,77 @@
+# TokenSMP Messages Configuration
+# 
+# All messages support MiniMessage format (https://docs.advntr.dev/minimessage/format.html)
+# Placeholders: %player%, %token%, %amount%, %lives%, %max%, %time%, %cooldown%
+
+prefix: "<gradient:#00ffff:#ff00ff>[TokenSMP]</gradient> "
+
+# General
+no-permission: "<red>You don't have permission to do that.</red>"
+player-not-found: "<red>Player '%player%' not found.</red>"
+invalid-amount: "<red>Invalid amount. Must be a positive number.</red>"
+invalid-token: "<red>Invalid token: '%token%'.</red>"
+token-disabled: "<red>This token is currently disabled.</red>"
+reload-success: "<green>Configuration reloaded successfully!</green>"
+reload-failed: "<red>Failed to reload configuration. Check console for errors.</red>"
+
+# Token Commands
+tokens-gui-opened: "<green>Opened token collection.</green>"
+token-info:
+  header: "<gradient:#00ffff:#ff00ff>=== Token Info: %token% ===</gradient>"
+  name: "<white>Name: </white>%display_name%"
+  rarity: "<white>Rarity: </white>%rarity%"
+  material: "<white>Material: </white>%material%"
+  health: "<white>Health Bonus: </white>%health%"
+  primary: "<white>Primary: </white>%primary_ability% (Cooldown: %primary_cooldown%)"
+  secondary: "<white>Secondary: </white>%secondary_ability% (Cooldown: %secondary_cooldown%)"
+  enabled: "<white>Status: </white>%enabled%"
+  footer: "<gradient:#00ffff:#ff00ff>===============================</gradient>"
+
+# Recipe Commands
+recipe-gui-opened: "<green>Opened recipe book.</green>"
+recipe-preview:
+  header: "<gradient:#ffd700:#ff8c00>=== Recipe: %token% ===</gradient>"
+  ingredients: "<white>Ingredients:</white>"
+  ingredient-line: "  <gray>%slot%: </gray>%item% x%amount%"
+  output: "<white>Output: </white>%output% x%amount%"
+  footer: "<gradient:#ffd700:#ff8c00>===============================</gradient>"
+
+# Life Commands
+lives-self: "<green>You have <gold>%lives%</gold> lives.</green>"
+lives-other: "<green>%player% has <gold>%lives%</gold> lives.</green>"
+lives-set: "<green>Set %player%'s lives to <gold>%amount%</gold>.</green>"
+lives-add: "<green>Added <gold>%amount%</gold> lives to %player%. They now have <gold>%lives%</gold> lives.</green>"
+lives-remove: "<green>Removed <gold>%amount%</gold> lives from %player%. They now have <gold>%lives%</gold> lives.</green>"
+lives-min-reached: "<red>Cannot reduce lives below minimum (%min%).</red>"
+lives-max-reached: "<red>Cannot increase lives above maximum (%max%).</red>"
+
+# Life System
+life-lost: "<red>You lost a life! Lives remaining: <gold>%lives%</gold></red>"
+life-gained: "<green>You gained a life! Lives remaining: <gold>%lives%</gold></green>"
+life-eliminated: "<red>You have been eliminated! No lives remaining.</red>"
+life-eliminated-broadcast: "<yellow>%player% has been eliminated!</yellow>"
+lives-display: "<gold>♥ </gold><white>Lives: </white><gold>%lives%</gold>"
+
+# Token Abilities
+cooldown: "<yellow>Ability on cooldown! Wait <gold>%time%</gold>.</yellow>"
+ability-used: "<green>Used <gold>%ability%</gold>!</green>"
+ability-failed: "<red>Failed to use ability: %reason%</red>"
+no-target: "<red>No valid target in range.</red>"
+
+# Life Token
+life-token-consumed: "<green>You consumed a Life Token! You now have <gold>%lives%</gold> lives.</green>"
+life-token-max: "<red>You have reached the maximum lives (<gold>%max%</gold>)!</red>"
+life-token-disabled: "<red>Life tokens are currently disabled.</red>"
+life-token-not-allowed: "<red>You cannot use Life Tokens in this world.</red>"
+
+# Admin Commands
+give-success: "<green>Gave <gold>%amount%x %token%</gold> to %player%.</green>"
+take-success: "<green>Took <gold>%amount%x %token%</gold> from %player%.</green>"
+list-tokens:
+  header: "<gradient:#00ffff:#ff00ff>=== Registered Tokens ===</gradient>"
+  entry: "  <white>%id%</white> - %display_name% (%rarity%) - %enabled%"
+  footer: "<gradient:#00ffff:#ff00ff>===========================</gradient>"
+
+# Errors
+error-generic: "<red>An error occurred. Check console for details.</red>"
+error-database: "<red>Database error. Please contact an administrator.</red>"

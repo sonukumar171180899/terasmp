@@ -1,0 +1,77 @@
+plugins {
+    id 'java'
+    id 'maven-publish'
+}
+
+group = 'com.tokensmp'
+version = '1.0.0'
+
+// Note: Paper 1.20.6+ requires Java 21+ at runtime.
+// This build configuration targets Java 21 for compilation.
+// To build: Install JDK 21+ (e.g., Eclipse Temurin, Microsoft OpenJDK, or Adoptium)
+// and ensure JAVA_HOME points to the JDK installation.
+// Then run: .\gradlew.bat build
+
+java {
+    // Toolchain configuration for Java 21
+    // Uncomment and configure when JDK 21+ is available:
+    // toolchain {
+    //     languageVersion = JavaLanguageVersion.of(21)
+    // }
+}
+
+repositories {
+    mavenCentral()
+    maven {
+        name = 'PaperMC'
+        url = 'https://repo.papermc.io/repository/maven-public/'
+    }
+    maven {
+        url = 'https://jitpack.io'
+    }
+}
+
+dependencies {
+    // Paper API 1.20.6 (26.1.2) - requires Java 21+
+    compileOnly 'io.papermc.paper:paper-api:1.20.6-R0.1-SNAPSHOT'
+    
+    // SQLite JDBC
+    implementation 'org.xerial:sqlite-jdbc:3.47.0.0'
+    
+    // Configuration - SnakeYAML
+    implementation 'org.yaml:snakeyaml:2.3'
+    
+    // Logging
+    implementation 'org.slf4j:slf4j-api:2.0.13'
+}
+
+tasks.withType(JavaCompile) {
+    options.encoding = 'UTF-8'
+    options.compilerArgs << '-Xlint:unchecked' << '-Xlint:deprecation'
+    // Set release to 21 when JDK 21+ is available
+    // options.release = 21
+}
+
+tasks.jar {
+    manifest {
+        attributes(
+            'Main-Class': 'com.tokensmp.TokenSMP',
+            'Plugin-Class': 'com.tokensmp.TokenSMP'
+        )
+    }
+    from('src/main/resources') {
+        include 'plugin.yml'
+        include 'config.yml'
+        include 'tokens.yml'
+        include 'recipes.yml'
+        include 'messages.yml'
+    }
+}
+
+publishing {
+    publications {
+        maven(MavenPublication) {
+            from components.java
+        }
+    }
+}

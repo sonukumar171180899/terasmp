@@ -1,0 +1,77 @@
+# TokenSMP Main Configuration
+# 
+# This file contains general plugin settings.
+
+# Debug logging
+debug: false
+
+# Life System Settings
+lives:
+  # Default lives for new players
+  default: 10
+  # Minimum lives a player can have
+  minimum: 0
+  # Maximum lives a player can have
+  maximum: 100
+  # Lives lost on death
+  death-penalty: 1
+  # Action bar display settings
+  action-bar:
+    enabled: true
+    interval: 20
+  # Elimination settings when lives reach 0
+  elimination:
+    enabled: false
+    # kick, ban, spectator, none
+    action: "kick"
+    kick-message: "<red>You have been eliminated! You have no lives remaining.</red>"
+    ban-duration: 0
+    broadcast: true
+    broadcast-message: "<yellow>%player% has been eliminated!</yellow>"
+
+# Token System Settings
+tokens:
+  # Enable/disable the token system globally
+  enabled: true
+  # Worlds where tokens are disabled
+  disabled-worlds: []
+  # Cooldown format: "10s", "1m", "1h"
+  global-cooldown-multiplier: 1.0
+
+# Crafting Settings
+crafting:
+  # Enable custom crafting recipes
+  enabled: true
+  # Allow crafting in all inventory crafting grids
+  allow-inventory-crafting: true
+
+# GUI Settings
+gui:
+  # Main token GUI
+  tokens:
+    title: "<gradient:#00ffff:#ff00ff>Token Collection</gradient>"
+    size: 54
+  # Token recipe GUI
+  recipes:
+    title: "<gradient:#ffd700:#ff8c00>Token Recipes</gradient>"
+    size: 54
+    items-per-page: 45
+
+# Message Settings
+messages:
+  prefix: "<gradient:#00ffff:#ff00ff>[TokenSMP]</gradient> "
+  no-permission: "<red>You don't have permission to do that.</red>"
+  player-not-found: "<red>Player not found.</red>"
+  invalid-amount: "<red>Invalid amount.</red>"
+  invalid-token: "<red>Invalid token.</red>"
+  token-disabled: "<red>This token is currently disabled.</red>"
+  cooldown: "<yellow>You must wait %time% before using this ability again.</yellow>"
+  life-token:
+    success: "<green>You gained an extra life! You now have %lives% lives.</green>"
+    fail-max: "<red>You have reached the maximum number of lives (%max%).</red>"
+    fail-disabled: "<red>Life tokens are currently disabled.</red>"
+
+# Particle and Sound defaults
+effects:
+  default-particle: "VILLAGER_HAPPY"
+  default-sound: "ENTITY_PLAYER_LEVELUP"

@@ -1,0 +1,131 @@
+# TokenSMP Crafting Recipes
+# 
+# Each recipe defines a shaped or shapeless crafting recipe for tokens.
+# Format follows Minecraft's recipe JSON structure.
+
+recipes:
+  # Zombie Token Recipe
+  zombie:
+    token: "zombie"
+    type: "shaped"
+    pattern:
+      - " R "
+      - "RBR"
+      - " R "
+    ingredients:
+      R: "ROTTEN_FLESH"
+      B: "BONE"
+    result:
+      amount: 1
+
+  # Skeleton Token Recipe
+  skeleton:
+    token: "skeleton"
+    type: "shaped"
+    pattern:
+      - " B "
+      - "BAB"
+      - " B "
+    ingredients:
+      B: "BONE"
+      A: "ARROW"
+    result:
+      amount: 1
+
+  # Spider Token Recipe
+  spider:
+    token: "spider"
+    type: "shaped"
+    pattern:
+      - " S "
+      - "SES"
+      - " S "
+    ingredients:
+      S: "STRING"
+      E: "SPIDER_EYE"
+    result:
+      amount: 1
+
+  # Creeper Token Recipe
+  creeper:
+    token: "creeper"
+    type: "shaped"
+    pattern:
+      - " G "
+      - "GCG"
+      - " G "
+    ingredients:
+      G: "GUNPOWDER"
+      C: "COAL"
+    result:
+      amount: 1
+
+  # Blaze Token Recipe
+  blaze:
+    token: "blaze"
+    type: "shaped"
+    pattern:
+      - " B "
+      - "BRB"
+      - " B "
+    ingredients:
+      B: "BLAZE_POWDER"
+      R: "BLAZE_ROD"
+    result:
+      amount: 1
+
+  # Enderman Token Recipe
+  enderman:
+    token: "enderman"
+    type: "shaped"
+    pattern:
+      - " E "
+      - "EPE"
+      - " E "
+    ingredients:
+      E: "ENDER_PEARL"
+      P: "PURPUR_BLOCK"
+    result:
+      amount: 1
+
+  # Warden Token Recipe
+  warden:
+    token: "warden"
+    type: "shaped"
+    pattern:
+      - " S "
+      - "SCS"
+      - " S "
+    ingredients:
+      S: "SCULK"
+      C: "SCULK_CATALYST"
+    result:
+      amount: 1
+
+  # Ender Dragon Token Recipe
+  ender_dragon:
+    token: "ender_dragon"
+    type: "shaped"
+    pattern:
+      - " D "
+      - "DBD"
+      - " D "
+    ingredients:
+      D: "DRAGON_BREATH"
+      B: "DRAGON_EGG"
+    result:
+      amount: 1
+
+  # Life Token Recipe
+  life_token:
+    token: "life_token"
+    type: "shaped"
+    pattern:
+      - " G "
+      - "GHG"
+      - " G "
+    ingredients:
+      G: "GOLDEN_APPLE"
+      H: "HEART_OF_THE_SEA"
+    result:
+      amount: 1

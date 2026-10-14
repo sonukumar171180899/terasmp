@@ -1,0 +1,245 @@
+# TokenSMP Token Definitions
+# 
+# Each token is defined by a unique ID and various properties.
+# Do not modify the 'id' field after creation as it's used for data persistence.
+
+tokens:
+  # Example: Zombie Token
+  zombie:
+    id: "zombie"
+    enabled: true
+    display-name: "<gradient:#8fbc8f:#2e8b57>Zombie Token</gradient>"
+    material: "ROTTEN_FLESH"
+    rarity: "COMMON"
+    lore:
+      - "<gray>A token infused with the essence of the undead.</gray>"
+      - ""
+      - "<yellow>Primary Ability:</yellow> <white>Infect</white>"
+      - "<gray>Infect nearby enemies with weakness.</gray>"
+      - ""
+      - "<yellow>Secondary Ability:</yellow> <white>Horde Call</white>"
+      - "<gray>Summon zombie minions to fight for you.</gray>"
+      - ""
+      - "<gold>Rarity: COMMON</gold>"
+    health: 20
+    primary:
+      ability: "infect"
+      cooldown: "30s"
+      mana-cost: 0
+    secondary:
+      ability: "horde_call"
+      cooldown: "60s"
+      mana-cost: 0
+
+  # Example: Skeleton Token
+  skeleton:
+    id: "skeleton"
+    enabled: true
+    display-name: "<gradient:#c0c0c0:#808080>Skeleton Token</gradient>"
+    material: "BONE"
+    rarity: "COMMON"
+    lore:
+      - "<gray>A token carved from ancient bones.</gray>"
+      - ""
+      - "<yellow>Primary Ability:</yellow> <white>Arrow Volley</white>"
+      - "<gray>Fire a barrage of arrows in a cone.</gray>"
+      - ""
+      - "<yellow>Secondary Ability:</yellow> <white>Bone Shield</white>"
+      - "<gray>Create a temporary shield of bones.</gray>"
+      - ""
+      - "<gold>Rarity: COMMON</gold>"
+    health: 20
+    primary:
+      ability: "arrow_volley"
+      cooldown: "25s"
+      mana-cost: 0
+    secondary:
+      ability: "bone_shield"
+      cooldown: "45s"
+      mana-cost: 0
+
+  # Example: Spider Token
+  spider:
+    id: "spider"
+    enabled: true
+    display-name: "<gradient:#8b008b:#4b0082>Spider Token</gradient>"
+    material: "SPIDER_EYE"
+    rarity: "UNCOMMON"
+    lore:
+      - "<gray>A token pulsing with arachnid venom.</gray>"
+      - ""
+      - "<yellow>Primary Ability:</yellow> <white>Venomous Bite</white>"
+      - "<gray>Poison your target with a deadly bite.</gray>"
+      - ""
+      - "<yellow>Secondary Ability:</yellow> <white>Web Trap</white>"
+      - "<gray>Ensnare enemies in sticky webs.</gray>"
+      - ""
+      - "<gold>Rarity: UNCOMMON</gold>"
+    health: 20
+    primary:
+      ability: "venomous_bite"
+      cooldown: "20s"
+      mana-cost: 0
+    secondary:
+      ability: "web_trap"
+      cooldown: "40s"
+      mana-cost: 0
+
+  # Example: Creeper Token
+  creeper:
+    id: "creeper"
+    enabled: true
+    display-name: "<gradient:#00ff00:#006400>Creeper Token</gradient>"
+    material: "GUNPOWDER"
+    rarity: "UNCOMMON"
+    lore:
+      - "<gray>A token that crackles with explosive energy.</gray>"
+      - ""
+      - "<yellow>Primary Ability:</yellow> <white>Explosive Touch</white>"
+      - "<gray>Your next attack causes an explosion.</gray>"
+      - ""
+      - "<yellow>Secondary Ability:</yellow> <white>Creeper Hide</white>"
+      - "<gray>Become invisible and silent for a short time.</gray>"
+      - ""
+      - "<gold>Rarity: UNCOMMON</gold>"
+    health: 20
+    primary:
+      ability: "explosive_touch"
+      cooldown: "30s"
+      mana-cost: 0
+    secondary:
+      ability: "creeper_hide"
+      cooldown: "60s"
+      mana-cost: 0
+
+  # Example: Blaze Token
+  blaze:
+    id: "blaze"
+    enabled: true
+    display-name: "<gradient:#ff4500:#ff8c00>Blaze Token</gradient>"
+    material: "BLAZE_ROD"
+    rarity: "RARE"
+    lore:
+      - "<gray>A token burning with the fire of the Nether.</gray>"
+      - ""
+      - "<yellow>Primary Ability:</yellow> <white>Fireball</white>"
+      - "<gray>Launch a devastating fireball.</gray>"
+      - ""
+      - "<yellow>Secondary Ability:</yellow> <white>Flame Aura</white>"
+      - "<gray>Surround yourself with damaging flames.</gray>"
+      - ""
+      - "<gold>Rarity: RARE</gold>"
+    health: 20
+    primary:
+      ability: "fireball"
+      cooldown: "20s"
+      mana-cost: 0
+    secondary:
+      ability: "flame_aura"
+      cooldown: "50s"
+      mana-cost: 0
+
+  # Example: Enderman Token
+  enderman:
+    id: "enderman"
+    enabled: true
+    display-name: "<gradient:#9400d3:#4b0082>Enderman Token</gradient>"
+    material: "ENDER_PEARL"
+    rarity: "RARE"
+    lore:
+      - "<gray>A token that warps space around it.</gray>"
+      - ""
+      - "<yellow>Primary Ability:</yellow> <white>Blink</white>"
+      - "<gray>Teleport a short distance instantly.</gray>"
+      - ""
+      - "<yellow>Secondary Ability:</yellow> <white>Ender Grasp</white>"
+      - "<gray>Pull an enemy towards you.</gray>"
+      - ""
+      - "<gold>Rarity: RARE</gold>"
+    health: 20
+    primary:
+      ability: "blink"
+      cooldown: "15s"
+      mana-cost: 0
+    secondary:
+      ability: "ender_grasp"
+      cooldown: "30s"
+      mana-cost: 0
+
+  # Example: Warden Token
+  warden:
+    id: "warden"
+    enabled: true
+    display-name: "<gradient:#1a1a2e:#16213e>Warden Token</gradient>"
+    material: "SCULK_CATALYST"
+    rarity: "EPIC"
+    lore:
+      - "<gray>A token humming with the power of the Deep Dark.</gray>"
+      - ""
+      - "<yellow>Primary Ability:</yellow> <white>Sonic Boom</white>"
+      - "<gray>Unleash a shockwave that ignores armor.</gray>"
+      - ""
+      - "<yellow>Secondary Ability:</yellow> <white>Darkness Veil</white>"
+      - "<gray>Blind all nearby enemies.</gray>"
+      - ""
+      - "<gold>Rarity: EPIC</gold>"
+    health: 30
+    primary:
+      ability: "sonic_boom"
+      cooldown: "40s"
+      mana-cost: 0
+    secondary:
+      ability: "darkness_veil"
+      cooldown: "60s"
+      mana-cost: 0
+
+  # Example: Ender Dragon Token
+  ender_dragon:
+    id: "ender_dragon"
+    enabled: true
+    display-name: "<gradient:#000000:#4b0082>Ender Dragon Token</gradient>"
+    material: "DRAGON_BREATH"
+    rarity: "LEGENDARY"
+    lore:
+      - "<gray>A token containing the breath of the Ender Dragon.</gray>"
+      - ""
+      - "<yellow>Primary Ability:</yellow> <white>Dragon's Breath</white>"
+      - "<gray>Unleash a cone of destructive dragon fire.</gray>"
+      - ""
+      - "<yellow>Secondary Ability:</yellow> <white>End Flight</white>"
+      - "<gray>Gain temporary creative flight.</gray>"
+      - ""
+      - "<gold>Rarity: LEGENDARY</gold>"
+    health: 40
+    primary:
+      ability: "dragons_breath"
+      cooldown: "30s"
+      mana-cost: 0
+    secondary:
+      ability: "end_flight"
+      cooldown: "120s"
+      mana-cost: 0
+
+  # Life Token - Special token for gaining lives
+  life_token:
+    id: "life_token"
+    enabled: true
+    display-name: "<gradient:#ff69b4:#ff1493>Life Token</gradient>"
+    material: "HEART_OF_THE_SEA"
+    rarity: "MYTHIC"
+    lore:
+      - "<gray>A rare token that holds the essence of life itself.</gray>"
+      - ""
+      - "<yellow>Right-click to consume</yellow> <white>and gain an extra life.</white>"
+      - ""
+      - "<red>Maximum lives: %max_lives%</red>"
+      - ""
+      - "<gold>Rarity: MYTHIC</gold>"
+    health: 0
+    primary:
+      ability: "life_grant"
+      cooldown: "0s"
+      mana-cost: 0
+    secondary: {}
+    consumable: true
+    max-lives: 20
